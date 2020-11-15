@@ -12,14 +12,17 @@ body{
 .container{
     width: 100%;
     height: 100%;
+    border-style: solid;
+    border-color: red;
 }
 
 .topContainer{
     width: 100%;
-    height: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-style: solid;
+    border-color: blue;
 }
 
 .addBookBtn{
@@ -36,4 +39,16 @@ body{
 
 .addBook{
     
+}
+
+.bottomContainer{
+    width: 100%;
+    height: 86.2%;
+    border-style: solid;
+    border-color: orange;
+}
+
+.row1 ,.row2 ,.row3 ,.row4{
+    border-style: solid;
+    border-color: seagreen;
 }

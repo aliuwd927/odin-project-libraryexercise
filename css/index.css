@@ -28,13 +28,11 @@ body{
 }
 
 .formContainer{
+    visibility: hidden;
     border-style: solid;
     border-color: blue;
 }
 
-.formContainer{
-    visibility: hidden;
-}
 .formContainer .show{
     visibility: visible;
 }

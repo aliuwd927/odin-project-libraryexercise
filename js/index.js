@@ -1,5 +1,6 @@
 const addButtonElem = document.querySelector('.addBook');
 addButtonElem.addEventListener('click',(e) => {
+    e.preventDefault();
     let test = e.target.nextElementSibling;
     console.log(e.target.nextElementSibling);
     if(test = 'formContainer'){

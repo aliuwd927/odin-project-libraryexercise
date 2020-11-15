@@ -6,8 +6,6 @@ addButtonElem.addEventListener('click',(e) => {
     if(test = 'formContainer'){
         let hideContainer = document.querySelector('.formContainer');
         hideContainer.classList.toggle('show');
-    }else{
-        console.log('chk logic');
     }
 });
 

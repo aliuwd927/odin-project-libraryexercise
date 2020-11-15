@@ -4,8 +4,8 @@ addButtonElem.addEventListener('click',(e) => {
     let test = e.target.nextElementSibling;
     console.log(e.target.nextElementSibling);
     if(test = 'formContainer'){
-        let hideContainer = document.querySelector('.formContainer');
-        hideContainer.classList.toggle('show');
+        let showContainer = document.querySelector('.formContainer');
+        showContainer.classList.toggle('show');
     }
 });
 

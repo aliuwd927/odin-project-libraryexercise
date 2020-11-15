@@ -33,6 +33,6 @@ body{
     border-color: blue;
 }
 
-.formContainer .show{
+.formContainer.show{
     visibility: visible;
 }

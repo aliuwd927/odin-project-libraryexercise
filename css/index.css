@@ -12,27 +12,28 @@ body{
 .container{
     width: 100%;
     height: 100%;
-    border-style: solid;
-    border-color: yellowgreen;
 }
 
 .topContainer{
     width: 100%;
-    border-style: solid;
-    border-color: red;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.addBook{
-    border-style: solid;
-    border-color: green;
+.addBookBtn{
+    width: 10%;
 }
 
 .formContainer{
     visibility: hidden;
-    border-style: solid;
-    border-color: blue;
 }
 
 .formContainer.show{
     visibility: visible;
+}
+
+.addBook{
+    
 }

@@ -15,6 +15,7 @@ function Book(){
     // the constructor
 }
 
-function addBookToLibrary(){
+const addBookToLibrary = document.querySelector('.addBook');
+addBookToLibrary.addEventListener('click',(e) =>{
     // do stuff here
-}
+});

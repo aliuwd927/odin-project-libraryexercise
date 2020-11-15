@@ -49,6 +49,8 @@ body{
 }
 
 .row1 ,.row2 ,.row3 ,.row4{
+    width: 100%;
+    height: 25%;
     border-style: solid;
     border-color: seagreen;
 }

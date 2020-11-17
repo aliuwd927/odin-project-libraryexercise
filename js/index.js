@@ -5,7 +5,7 @@ addButtonElem.addEventListener('click',(e) => {
     if(formContainerElement = 'formContainer'){
         let showContainer = document.querySelector('.formContainer');
         showContainer.classList.toggle('show');
-    }
+    };
 });
 
 let myLibrary = [];
@@ -15,7 +15,7 @@ function book(title,author){
     this.title = title;
     this.author = author;
      
-}
+};
 
 const addBookToLibrary = document.querySelector('.addBook');
 addBookToLibrary.addEventListener('click',(e) =>{

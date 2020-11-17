@@ -1,8 +1,7 @@
 const addButtonElem = document.querySelector('.addBookBtn');
 addButtonElem.addEventListener('click',(e) => {
-    //e.preventDefault();
     let test = e.target.nextElementSibling;
-    console.log(e.target.nextElementSibling);
+    //console.log(e.target.nextElementSibling);
     if(test = 'formContainer'){
         let showContainer = document.querySelector('.formContainer');
         showContainer.classList.toggle('show');
@@ -11,11 +10,20 @@ addButtonElem.addEventListener('click',(e) => {
 
 let myLibrary = [];
 
-function Book(){
+function Book(title, author){
     // the constructor
+    this.title = title;
+    this.author = author
 }
 
 const addBookToLibrary = document.querySelector('.addBook');
 addBookToLibrary.addEventListener('click',(e) =>{
     // do stuff here
+    e.preventDefault(); // prevent refresh when submit
+    //take info from formHTML
+    //push info to myLibrary
+    const titleBook = document.querySelector('.title').value;
+    const authorBook = document.querySelector('.author').value;
+    myLibrary.push({'title': titleBook, 'author': authorBook});
 });
+

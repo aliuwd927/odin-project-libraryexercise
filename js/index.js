@@ -26,5 +26,13 @@ addBookToLibrary.addEventListener('click',(e) =>{
     const titleBook = document.querySelector('.title').value;
     const authorBook = document.querySelector('.author').value;
     myLibrary.push(new book(titleBook, authorBook));
+
+    /*
+    This function takes my library
+    Information pulled from the book function
+    Display to Dom
+    */
+
+    
 });
 

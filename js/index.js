@@ -1,8 +1,8 @@
 const addButtonElem = document.querySelector('.addBookBtn');
 addButtonElem.addEventListener('click',(e) => {
-    let test = e.target.nextElementSibling;
+    let formContainerElement = e.target.nextElementSibling;
     //console.log(e.target.nextElementSibling);
-    if(test = 'formContainer'){
+    if(formContainerElement = 'formContainer'){
         let showContainer = document.querySelector('.formContainer');
         showContainer.classList.toggle('show');
     }
@@ -10,7 +10,7 @@ addButtonElem.addEventListener('click',(e) => {
 
 let myLibrary = [];
 
-function Book(title, author){
+function book(title, author){
     // the constructor
     this.title = title;
     this.author = author

@@ -10,10 +10,11 @@ addButtonElem.addEventListener('click',(e) => {
 
 let myLibrary = [];
 
-function book(title, author){
+function book(title,author){
     // the constructor
     this.title = title;
-    this.author = author
+    this.author = author;
+     
 }
 
 const addBookToLibrary = document.querySelector('.addBook');
@@ -24,6 +25,6 @@ addBookToLibrary.addEventListener('click',(e) =>{
     //push info to myLibrary
     const titleBook = document.querySelector('.title').value;
     const authorBook = document.querySelector('.author').value;
-    myLibrary.push({'title': titleBook, 'author': authorBook});
+    myLibrary.push(new book(titleBook, authorBook));
 });
 

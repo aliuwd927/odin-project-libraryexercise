@@ -32,7 +32,9 @@ addBookToLibrary.addEventListener('click',(e) =>{
     Information pulled from the book function
     Display to Dom
     */
-        
+        myLibrary.forEach((books) =>{
+            console.log(books);
+        })
 
 });
 

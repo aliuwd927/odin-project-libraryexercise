@@ -16,7 +16,7 @@ function book(title,author){
     this.author = author;
      
 };
-
+const bottomContainer = document.querySelector('.bottomContainer');
 const addBookToLibrary = document.querySelector('.addBook');
 addBookToLibrary.addEventListener('click',(e) =>{
     // do stuff here
@@ -27,14 +27,34 @@ addBookToLibrary.addEventListener('click',(e) =>{
     const authorBook = document.querySelector('.author').value;
     myLibrary.push(new book(titleBook, authorBook));
 
+
     /*
     This function takes my library
     Information pulled from the book function
     Display to Dom
     */
-        myLibrary.forEach((books) =>{
-            console.log(books);
-        })
-
+   displayToDom();
 });
 
+function displayToDom(){
+
+    //let booksPerRow = 4;
+    //let booksAdded = 0;
+
+        myLibrary.forEach((books,index) =>{
+                
+            if( index % 3 == 0){
+                bottomContainer.innerHTML = `<div class='row'></div>`;
+            }
+            
+            const row = document.querySelector('.row:last-child');
+            row.innerHTML += `<detail>   
+                                <summary>    
+                                    ${books.title}<br>
+                                    ${books.author}
+                                <summary>
+             
+                                <detail>`
+        });
+
+}

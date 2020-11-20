@@ -38,10 +38,16 @@ addBookToLibrary.addEventListener('click',(e) =>{
 
 function displayToDom(){
         console.log(myLibrary);
-
-        for(let i =0; i < myLibrary.length; i++){
+        let test = 0;
+        for(let i = 0; i < myLibrary.length; i++){
             console.log(myLibrary[i]);
+            if((myLibrary[i] % 4) === 0){
+                console.log('If you saw nice once');
+            }else{
+                console.log('chk logic');
+            }
         }
+        
 }
 
 
@@ -65,7 +71,7 @@ function displayToDom(){
 
         console.log(index);
         
-            const row = document.querySelector('.row');
+            const row = document.querySelector('.row').lastChild.nodeName;
             row.innerHTML = `<div class='booksAdded'>  
                                 ${books.title}<br>
                                 ${books.author}

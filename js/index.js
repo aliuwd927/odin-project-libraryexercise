@@ -21,8 +21,8 @@ const addBookToLibrary = document.querySelector('.addBook');
 addBookToLibrary.addEventListener('click',(e) =>{
     // do stuff here
     e.preventDefault(); // prevent refresh when submit
-    //take info from formHTML
-    //push info to myLibrary
+    //get value from formHTML
+    //push new book to myLibrary to create book object
     const titleBook = document.querySelector('.title').value;
     const authorBook = document.querySelector('.author').value;
     myLibrary.push(new book(titleBook, authorBook));
@@ -37,6 +37,23 @@ addBookToLibrary.addEventListener('click',(e) =>{
 });
 
 function displayToDom(){
+        console.log(myLibrary);
+
+        for(let i =0; i < myLibrary.length; i++){
+            console.log(myLibrary[i]);
+        }
+}
+
+
+
+
+
+
+
+
+
+
+ /*
     myLibrary.forEach((books, index) =>{
              
         if( index % 4 === 0 ){
@@ -47,12 +64,12 @@ function displayToDom(){
         }
 
         console.log(index);
-        /*
+        
             const row = document.querySelector('.row');
             row.innerHTML = `<div class='booksAdded'>  
                                 ${books.title}<br>
                                 ${books.author}
                             </div> `;
-                            */
+                            
     });  
-}
+        */

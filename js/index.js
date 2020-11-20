@@ -37,24 +37,22 @@ addBookToLibrary.addEventListener('click',(e) =>{
 });
 
 function displayToDom(){
-
-    //let booksPerRow = 4;
-    //let booksAdded = 0;
-
-        myLibrary.forEach((books,index) =>{
-                
-            if( index % 3 == 0){
-                bottomContainer.innerHTML = `<div class='row'></div>`;
-            }
-            
-            const row = document.querySelector('.row:last-child');
-            row.innerHTML += `<detail>   
-                                <summary>    
-                                    ${books.title}<br>
-                                    ${books.author}
-                                <summary>
+    myLibrary.forEach((books, index) =>{
              
-                                <detail>`
-        });
+        if( index % 4 === 0 ){
+            bottomContainer.innerHTML += `<div class='row'></div>`;
+            
+        }else{
+            alert('chk logic');
+        }
 
+        console.log(index);
+        /*
+            const row = document.querySelector('.row');
+            row.innerHTML = `<div class='booksAdded'>  
+                                ${books.title}<br>
+                                ${books.author}
+                            </div> `;
+                            */
+    });  
 }

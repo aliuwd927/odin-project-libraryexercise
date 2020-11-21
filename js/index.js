@@ -36,17 +36,18 @@ addBookToLibrary.addEventListener('click',(e) =>{
 
    document.querySelector('.title').value ='';
    document.querySelector('.author').value ='';
+   
+   
 });
 
 function displayToDom(){
-    myLibrary.forEach((books)=>{
-        let node = document.createElement('div');
+    let node = document.createElement('div');
         node.classList.add('booksAdded');
-        let textnode = document.createTextNode(`${books.title} ${books.author}`);
-        node.appendChild(textnode);
-        bottomContainer.appendChild(node);
-
+    myLibrary.forEach((books) => {
+        node.innerHTML = ` ${books.title}<br>
+                           ${books.author}`
     });
+    bottomContainer.appendChild(node);
 }
 
 

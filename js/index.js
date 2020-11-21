@@ -36,8 +36,6 @@ addBookToLibrary.addEventListener('click',(e) =>{
 
    document.querySelector('.title').value ='';
    document.querySelector('.author').value ='';
-   
-   
 });
 
 function displayToDom(){
@@ -49,37 +47,3 @@ function displayToDom(){
     });
     bottomContainer.appendChild(node);
 }
-
-
-
-
-
-
-
-/*
-    myLibrary.forEach((books, index) =>{
-             
-        if( index % 4 === 0 ){
-            bottomContainer.innerHTML += `<div class='row'></div>`;
-            
-        }else{
-            alert('chk logic');
-        }
-
-        console.log(index);
-        
-            const row = document.querySelector('.row').lastChild.nodeName;
-            row.innerHTML = `<div class='booksAdded'>  
-                                ${books.title}<br>
-                                ${books.author}
-                            </div> `;
-                            
-    });
-
-
-     let node = document.createElement('div');
-            node.classList.add('booksAdded');
-            let textnode = document.createTextNode(myLibrary[i]);
-            node.appendChild(textnode);
-            bottomContainer.appendChild(node);
-*/

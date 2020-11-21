@@ -10,11 +10,10 @@ addButtonElem.addEventListener('click',(e) => {
 
 let myLibrary = [];
 
-function book(title,author){
+function Book(title,author){
     // the constructor
     this.title = title;
     this.author = author;
-     
 };
 const bottomContainer = document.querySelector('.bottomContainer');
 const addBookToLibrary = document.querySelector('.addBook');
@@ -25,7 +24,7 @@ addBookToLibrary.addEventListener('click',(e) =>{
     //push new book to myLibrary to create book object
     const titleBook = document.querySelector('.title').value;
     const authorBook = document.querySelector('.author').value;
-    myLibrary.push(new book(titleBook, authorBook));
+    myLibrary.push(new Book(titleBook, authorBook));
 
 
     /*
@@ -34,20 +33,20 @@ addBookToLibrary.addEventListener('click',(e) =>{
     Display to Dom
     */
    displayToDom();
+
+   document.querySelector('.title').value ='';
+   document.querySelector('.author').value ='';
 });
 
 function displayToDom(){
-        console.log(myLibrary);
-        let test = 0;
-        for(let i = 0; i < myLibrary.length; i++){
-            console.log(myLibrary[i]);
-            if((myLibrary[i] % 4) === 0){
-                console.log('If you saw nice once');
-            }else{
-                console.log('chk logic');
-            }
-        }
-        
+    myLibrary.forEach((books)=>{
+        let node = document.createElement('div');
+        node.classList.add('booksAdded');
+        let textnode = document.createTextNode(`${books.title} ${books.author}`);
+        node.appendChild(textnode);
+        bottomContainer.appendChild(node);
+
+    });
 }
 
 
@@ -56,10 +55,7 @@ function displayToDom(){
 
 
 
-
-
-
- /*
+/*
     myLibrary.forEach((books, index) =>{
              
         if( index % 4 === 0 ){
@@ -77,5 +73,12 @@ function displayToDom(){
                                 ${books.author}
                             </div> `;
                             
-    });  
-        */
+    });
+
+
+     let node = document.createElement('div');
+            node.classList.add('booksAdded');
+            let textnode = document.createTextNode(myLibrary[i]);
+            node.appendChild(textnode);
+            bottomContainer.appendChild(node);
+*/

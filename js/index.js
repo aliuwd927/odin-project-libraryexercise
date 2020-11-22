@@ -38,6 +38,23 @@ addBookToLibrary.addEventListener('click',(e) =>{
    document.querySelector('.author').value ='';
 });
 
+let shelfRow = 0;
+
+function displayToDom(){
+    
+        if(shelfRow % 4 == 0){
+           console.log(shelfRow);
+        } 
+        shelfRow++;
+}
+
+
+
+
+
+
+
+/*
 function displayToDom(){
     let node = document.createElement('div');
         node.classList.add('booksAdded');
@@ -47,7 +64,7 @@ function displayToDom(){
     });
     bottomContainer.appendChild(node);
 }
-
+*/
 
 /*
     let node = document.createElement('div');

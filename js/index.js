@@ -43,7 +43,10 @@ let shelfRow = 0;
 function displayToDom(){
     
         if(shelfRow % 4 == 0){
-           console.log(shelfRow);
+          let row = document.createElement('div');
+              row.classList.add('row');
+          bottomContainer.appendChild(row);
+          console.log(shelfRow);
         } 
         shelfRow++;
 }

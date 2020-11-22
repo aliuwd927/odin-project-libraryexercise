@@ -43,7 +43,19 @@ function displayToDom(){
         node.classList.add('booksAdded');
     myLibrary.forEach((books) => {
         node.innerHTML = ` ${books.title}<br>
-                           ${books.author}`
+                           ${books.author}`;
     });
     bottomContainer.appendChild(node);
 }
+
+
+/*
+    let node = document.createElement('div');
+        node.classList.add('booksAdded');
+    myLibrary.forEach((books) => {
+        node.innerHTML = ` ${books.title}<br>
+                           ${books.author}`;
+    });
+    bottomContainer.appendChild(node);
+
+*/

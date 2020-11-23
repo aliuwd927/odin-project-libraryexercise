@@ -38,50 +38,12 @@ addBookToLibrary.addEventListener('click',(e) =>{
    document.querySelector('.author').value ='';
 });
 
-let shelfRow = 0;
-
-function displayToDom(){
-    let row = document.createElement('div');
-    row.classList.add('row');
-        if(shelfRow % 4 == 0){
-          bottomContainer.appendChild(row);
-        } 
-            myLibrary.forEach((books) => {
-            let booksAdded = document.createElement('div');
-            booksAdded.classList.add('booksAdded');
-            booksAdded.innerHTML += ` ${books.title}<br>
-                                     ${books.author}`;
-            row.appendChild(booksAdded);
-            });
-        shelfRow++;
-        console.log(shelfRow);
-}
-
-
-
-
-
-
-
-/*
 function displayToDom(){
     let booksAdded = document.createElement('div');
         booksAdded.classList.add('booksAdded');
-    myLibrary.forEach((books) => {
-        booksAdded.innerHTML = ` ${books.title}<br>
-                           ${books.author}`;
-    });
-    row.appendChild(booksAdded);
+            myLibrary.forEach((books) => {
+            booksAdded.innerHTML = ` ${books.title}<br>
+                                     ${books.author}`;
+            bottomContainer.appendChild(booksAdded);
+            });
 }
-*/
-
-/*
-    let node = document.createElement('div');
-        node.classList.add('booksAdded');
-    myLibrary.forEach((books) => {
-        node.innerHTML = ` ${books.title}<br>
-                           ${books.author}`;
-    });
-    bottomContainer.appendChild(node);
-
-*/
